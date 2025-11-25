@@ -55,7 +55,8 @@ Architecture/Data-Flow D
 iagram
 
 Architecture Diagram
-<img width="2044" height="1973" alt="deepseek_mermaid_20251125_01f882" src="https://github.com/user-attachments/assets/61a2e36a-1bdf-4a45-8b9f-46ea8fde66a5" />
+![Uploading deepseek_mermaid_20251125_01f882.png…]()
+
 
 
 Data Flow Explanation
@@ -86,4 +87,5 @@ _markdown_20251125_3e4a53.md…]()
 3. Feel free to adjust any content to better fit your project's specifics.
 
 This structure should provide a comprehensive overview and guide for users and developers interacting with your project.
+
 
