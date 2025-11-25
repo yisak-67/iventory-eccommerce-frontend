@@ -13,29 +13,30 @@ class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
-
     @action(detail=False, methods=['get'])
     def search(self, request):
+        queryset = self.get_queryset()
+        query_params = request.query_params
+
         json_filters = Q()
-        for key, value in request.query_params.items():
+        for key, value in query_params.items():
             if key in ['page', 'page_size', 'name', 'price_min', 'price_max']:
                 continue
             json_filters &= build_json_filter(key, value)
-     
+
         if json_filters:
             queryset = queryset.filter(json_filters)
-        
-        # Handle regular field searches
+
         name_query = query_params.get('name', '')
         if name_query:
             queryset = queryset.filter(name__icontains=name_query)
-        
+
         price_min = query_params.get('price_min')
         price_max = query_params.get('price_max')
         if price_min:
             queryset = queryset.filter(price__gte=price_min)
         if price_max:
             queryset = queryset.filter(price__lte=price_max)
-        
+
         serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.data)
