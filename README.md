@@ -1,4 +1,4 @@
-
+[deepseek_markdown_20251125_3e4a53.md](https://github.com/user-attachments/files/23750204/deepseek_markdown_20251125_3e4a53.md)
 # Inventory E-Commerce Frontend
 
 ## Prerequisites
@@ -55,6 +55,8 @@ Architecture/Data-Flow D
 iagram
 
 Architecture Diagram
+<img width="2044" height="1973" alt="deepseek_mermaid_20251125_01f882" src="https://github.com/user-attachments/assets/61a2e36a-1bdf-4a45-8b9f-46ea8fde66a5" />
+
 
 Data Flow Explanation
 React: The frontend interface where users interact with the application.
@@ -63,6 +65,20 @@ PostgreSQL: The database that stores all inventory and user data.
 JSONField: This field is used in the database to store complex data types in a JSON format, allowing flexible data storage and retrieval.
 Search Flow: User queries are sent from React to the Django API, which processes the request and queries the PostgreSQL database. The results are returned as JSON and displayed in the frontend.
 
+[Uploading deepseek## System Architecture
+
+| Layer | Component | Technology | Responsibility |
+|-------|-----------|------------|----------------|
+| **Frontend** | React SPA | React, Axios | UI Components, State Management, API Calls |
+| **API Gateway** | Django REST | Django, DRF | Request Routing, Authentication, Validation |
+| **Business Logic** | Views/Serializers | Python | Data Processing, Business Rules |
+| **Data Access** | Django ORM | PostgreSQL | Database Operations, JSONField Queries |
+| **Storage** | Database | PostgreSQL | Data Persistence, JSON Attribute Storage |
+
+## Data Flow for Search
+_markdown_20251125_3e4a53.md…]()
+
+
 
 ### Instructions for Use
 1. Replace `https://github.com/your-backend-repo.git` with the actual URL of your backend repository.
@@ -70,3 +86,4 @@ Search Flow: User queries are sent from React to the Django API, which processes
 3. Feel free to adjust any content to better fit your project's specifics.
 
 This structure should provide a comprehensive overview and guide for users and developers interacting with your project.
+
