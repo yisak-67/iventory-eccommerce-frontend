@@ -9,11 +9,12 @@ Before you begin, ensure you have met the following requirements:
 - **Python** (for the backend)
 
 ## Setup Steps
-
+ **Clone the Repository**
+ ```bash
+git clone git@github.com:yisak-67/iventory-eccommerce-frontend.git
 ### 1. Backend Setup
-1. **Clone the Backend Repository**
    ```bash
-   git clone https://github.com/your-backend-repo.git
+  
    cd your-backend-repo
 Create a Virtual Environment
 
@@ -34,10 +35,10 @@ Run the Backend Server
 
 python manage.py runserver
 2. Frontend Setup
-Clone the Frontend Repository
 
-Copy
-git clone https://github.com/yisak-67/iventory-eccommerce-frontend.git
+
+
+
 cd iventory-eccommerce-frontend
 Install Dependencies
 
@@ -87,6 +88,7 @@ _markdown_20251125_3e4a53.md…]()
 3. Feel free to adjust any content to better fit your project's specifics.
 
 This structure should provide a comprehensive overview and guide for users and developers interacting with your project.
+
 
 
 
