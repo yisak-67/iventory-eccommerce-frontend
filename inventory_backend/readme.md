@@ -13,10 +13,7 @@ This backend is a Django REST API that serves inventory and e‑commerce endpoin
 - Git
 - Windows PowerShell (commands below use PowerShell)
 
-## Important paths
-- Backend root: `c:\Users\A Y U B COMPUTERS\inventory_eccommerce\backend`
-- Django entrypoint: `manage.py`
-- Requirements: `requirements.txt` (or `pyproject.toml`)
+
 
 ## Environment (.env)
 Create `.env` in the backend root with these variables (example):
@@ -50,7 +47,7 @@ pip install -r requirements.txt
 # open psql or run these as a DB admin
 psql -U postgres
 CREATE DATABASE inventory_db;
-CREATE USER dbuser WITH PASSWORD 'dbpass';
+CREATE USER dbuser WITH PASSWORD "";
 GRANT ALL PRIVILEGES ON DATABASE inventory_db TO dbuser;
 \q
 ```

@@ -47,21 +47,21 @@ const SearchBar = ({ onSearch }) => {
   const hasActiveFilters = Object.values(searchParams).some(value => value !== '')
 
   // Common attribute examples for quick selection
-  const attributeExamples = [
-    { key: 'color', value: 'midnight blue', description: 'Search by color name' },
-    { key: 'sku', value: 'AR-2025-XL', description: 'Search by product SKU' },
-    { key: 'dimensions.width', value: '11', description: 'Search by width dimension' },
-    { key: 'specs.weight', value: '240g', description: 'Search by weight' },
-  ]
+  // const attributeExamples = [
+  //   { key: 'color', value: 'midnight blue', description: 'Search by color name' },
+  //   { key: 'sku', value: 'AR-2025-XL', description: 'Search by product SKU' },
+  //   { key: 'dimensions.width', value: '11', description: 'Search by width dimension' },
+  //   { key: 'specs.weight', value: '240g', description: 'Search by weight' },
+  // ]
 
-  const applyExample = (example) => {
-    setSearchParams(prev => ({
-      ...prev,
-      attributeKey: example.key,
-      attributeValue: example.value
-    }))
-    setIsAdvancedOpen(true)
-  }
+  // const applyExample = (example) => {
+  //   setSearchParams(prev => ({
+  //     ...prev,
+  //     attributeKey: example.key,
+  //     attributeValue: example.value
+  //   }))
+  //   setIsAdvancedOpen(true)
+  // }
 
   return (
     <section className="bg-[#1a1a1a] border border-[#333] p-4 rounded-xl">
@@ -135,22 +135,7 @@ const SearchBar = ({ onSearch }) => {
         </div>
 
         {/* Quick Examples */}
-        <div className="bg-[#111] border border-[#333] p-3 rounded-lg">
-          <p className="text-sm font-medium text-indigo-400 mb-2">Quick Search Examples</p>
-          <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
-            {attributeExamples.map((example, index) => (
-              <button
-                key={index}
-                type="button"
-                onClick={() => applyExample(example)}
-                className="text-left bg-[#1a1a1a] border border-[#333] p-2 rounded text-xs hover:bg-[#222] transition-colors"
-              >
-                <div className="font-mono text-purple-400">{example.key}</div>
-                <div className="text-gray-400 mt-1">{example.value}</div>
-              </button>
-            ))}
-          </div>
-        </div>
+       
 
         {/* Advanced Filters Toggle */}
         <div className="border-t border-[#333] pt-4">
@@ -215,39 +200,7 @@ const SearchBar = ({ onSearch }) => {
               </div>
               
               {/* Advanced Examples */}
-              <div className="grid gap-4 md:grid-cols-2">
-                <div className="bg-[#111] border border-[#333] p-3 rounded-lg">
-                  <p className="text-sm font-medium text-purple-400 mb-2">Nested Objects</p>
-                  <div className="space-y-1 text-xs text-gray-400">
-                    <div className="flex justify-between">
-                      <code>dimensions.width</code>
-                      <span>→</span>
-                      <code>11</code>
-                    </div>
-                    <div className="flex justify-between">
-                      <code>specs.cushioning</code>
-                      <span>→</span>
-                      <code>React Air</code>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="bg-[#111] border border-[#333] p-3 rounded-lg">
-                  <p className="text-sm font-medium text-blue-400 mb-2">Simple Values</p>
-                  <div className="space-y-1 text-xs text-gray-400">
-                    <div className="flex justify-between">
-                      <code>tags</code>
-                      <span>→</span>
-                      <code>running</code>
-                    </div>
-                    <div className="flex justify-between">
-                      <code>sku</code>
-                      <span>→</span>
-                      <code>AR-2025-XL</code>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           )}
         </div>
